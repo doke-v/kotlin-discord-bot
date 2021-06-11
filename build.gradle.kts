@@ -1,11 +1,12 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.4.21"
+    kotlin("jvm") version "1.4.32"
+    kotlin("plugin.serialization") version "1.5.0"
 }
 
 group = "me.user"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -16,6 +17,9 @@ dependencies {
     implementation("dev.kord:kord-core:0.7.0-RC3")
     implementation("org.slf4j:slf4j-simple:1.6.1")
     implementation("io.github.cdimascio:dotenv-kotlin:6.2.2")
+    implementation("io.github.microutils:kotlin-logging-jvm:2.0.8")
+    implementation("org.reflections:reflections:0.9.12")
+    implementation("com.github.kittinunf.fuel:fuel:2.3.1")
 }
 
 tasks.test {
