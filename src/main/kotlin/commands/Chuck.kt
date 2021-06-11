@@ -10,7 +10,7 @@ data class JokeData(val value: String)
 class Chuck : Command("chuck") {
     override suspend fun execute(event: MessageCreateEvent) {
         val (_, _, result) = "https://api.chucknorris.io/jokes/random".httpGet().responseString()
-        val obj = Json { ignoreUnknownKeys = true }.decodeFromString<JokeData>(result.get())
-        event.message.channel.createMessage(obj.value)
+        val (value) = Json { ignoreUnknownKeys = true }.decodeFromString<JokeData>(result.get())
+        event.message.channel.createMessage(value)
     }
 }
