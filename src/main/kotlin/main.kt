@@ -9,9 +9,9 @@ suspend fun main() {
     val commands = getCommands()
 
     client.on<MessageCreateEvent> {
-        if(message.author?.isBot == true) return@on
+        if (message.author?.isBot == true) return@on
         for (command in commands) {
-            if(message.content.startsWith("!" + command.name)) {
+            if (message.content.startsWith("!" + command.name)) {
                 try {
                     command.execute(this)
                 } catch (e: Exception) {
