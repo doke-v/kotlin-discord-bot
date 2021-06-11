@@ -15,11 +15,11 @@ repositories {
 dependencies {
     testImplementation(kotlin("test-junit"))
     implementation("dev.kord:kord-core:0.7.0-RC3")
-    implementation("org.slf4j:slf4j-simple:1.6.1")
     implementation("io.github.cdimascio:dotenv-kotlin:6.2.2")
     implementation("io.github.microutils:kotlin-logging-jvm:2.0.8")
     implementation("org.reflections:reflections:0.9.12")
     implementation("com.github.kittinunf.fuel:fuel:2.3.1")
+    implementation("org.slf4j:slf4j-log4j12:1.7.30")
 }
 
 tasks.test {
